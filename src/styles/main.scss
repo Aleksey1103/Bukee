@@ -1,0 +1,143 @@
+@import "libs";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "general/fonts";
+@import "general/base";
+@import "../blocks/blocks";
+
+$light-color:#fff;
+$accent-color:#65e496;
+
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+   font-family: 'Roboto Slab', serif;
+}
+
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.page-main {
+    background-image: url(../img/bg-main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:$light-color;
+    padding-bottom: 161px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 38px;
+    padding-bottom: 166px;
+
+    &__logo {
+        display: block;
+        width: 137px;
+        height:28px;
+        background-image: url(../img/logo.svg);
+    }
+
+    &-list {
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-end;
+        font-family: 'Open Sans', serif;
+
+        &__item {
+            margin-left: 22px;
+            padding-bottom: 5px;
+            border-bottom: 3px solid transparent;
+            transition: .3s;
+            &:hover {
+                border-bottom: 3px solid $accent-color;
+            }
+        }
+
+        &__item.active {
+            border-bottom: 3px solid $accent-color;
+        }
+
+        &__link {
+            text-decoration: none;
+            color:$light-color;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+.block-text {
+    flex-basis: calc(92% - 500px);
+    &__name {
+        font-family: 'Open Sans', serif;
+        font-size: 18px;
+        letter-spacing: 0.7px;
+        margin-bottom: 30px;
+    }
+
+    &__title {
+        font-size: 48px;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+        margin-bottom: 40px;
+        span {
+            display: block;
+            font-size: 18px;           
+            color:$accent-color;
+            margin-top: 11px;
+            letter-spacing: 0.9px;
+        }
+    }
+
+    &__description {
+        font-family: 'Open Sans', serif;
+        font-size: 15px;
+        line-height: 24px;
+        letter-spacing: 0.9px;
+        word-spacing: -1px;
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+        display: block;
+        background-color:$accent-color;
+        color:$light-color;
+        text-decoration: none;
+        text-align: center;
+        max-width: 250px;
+        border-radius: 3px;
+        margin-top: 47px;
+        padding: 15px 0;
+        letter-spacing: 1.6px;
+        margin-bottom: 19px;
+    }
+
+    small {
+        font-family: 'Open Sans', serif;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: 0.2px;
+    }
+}
+
+.block-book {
+    display: flex;
+    justify-content: flex-start;
+
+    &-demo {
+        display: block;
+        width: 445px;
+        height: 639px;
+        background-image: url(../img/book-header.svg);
+        background-repeat: no-repeat;
+        flex-basis: 500px;
+    }
+}
