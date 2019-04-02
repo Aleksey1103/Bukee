@@ -31,7 +31,7 @@ body {
     margin: 0 auto;
 }
 
-.page-main {
+.page-main {   
     background-image: url(../img/bg-main.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -81,6 +81,8 @@ body {
 
 .block-text {
     flex-basis: calc(92% - 500px);
+    position: relative;
+    z-index: 0;
     &__name {
         font-family: 'Open Sans', serif;
         font-size: 18px;
@@ -112,24 +114,7 @@ body {
         line-height: 24px;
         letter-spacing: 0.75px;       
         margin-bottom: 24px;
-    }
-    &__btn {
-        display: block;
-        background-color: $accent-color;
-        color: $light-color;
-        font-size: 18px;
-        text-decoration: none;
-        text-align: center;
-        max-width: 250px;
-        border-radius: 3px;
-        margin-top: 47px;
-        padding: 12px 0;
-        letter-spacing: 0.75px;
-        margin-bottom: 16px;
-        &_biography {
-            max-width: 236px;
-        }
-    }
+    }    
     small {
         font-family: 'Open Sans', serif;
         font-weight: 400;
@@ -184,7 +169,7 @@ body {
     padding: 160px 0 160px 0;
     &_gray {
         background-color: $bg-light-color;
-        padding: 163px 0 254px 0;
+        padding: 163px 0 240px 0;
     }
     &__title {
         font-size: 48px;
@@ -197,6 +182,49 @@ body {
         text-align: center;
         font-size: 18px;
         letter-spacing: 0.9px;
+    }
+    &__btn {
+        position: relative;
+        display: block;
+        outline: none;
+        border: none;
+        background: linear-gradient(to top left, #65e4ce, #65e4a1);
+        color: $light-color;
+        font-size: 18px;
+        text-decoration: none;
+        text-align: center;
+        max-width: 250px;
+        border-radius: 3px;
+        margin-top: 47px;
+        padding: 12px 0;
+        letter-spacing: 0.75px;
+        margin-bottom: 16px;
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            height: 20px;
+            width: 100%;
+            background-color: #b2f1be;
+            border-radius: 3px;
+            z-index: -1;
+        }
+        &_biography {
+            max-width: 236px;
+        }
+        &_about {
+            letter-spacing: 0.9px;
+            padding: 13px 42px 17px 45px;            
+            margin-left: 2px;
+            margin-top: 27px;
+        }
+        &_other {
+            background-color: #65e4a4;
+            margin: 84px auto 0 auto;
+            max-width: 221px;
+        }
     }
 }
 
@@ -278,6 +306,8 @@ body {
     }    
     &-table {
         flex-basis: 49%;
+        position: relative;
+        z-index: 0;
         &__list {
             margin: 25px 0 0 0;
             padding: 0;
@@ -301,26 +331,14 @@ body {
                     font-family: 'Open Sans', serif;
                     font-size: 15px;
                     line-height: 22px;
-                    background-color:#5fc9b6;
+                    background: linear-gradient(to top left, #65e4ce, #65e4a1);
                     color: $light-color;
                     padding: 0px 7px;
                     margin-bottom: 10px;          
                 }
             }
         }
-    }
-    &__btn {       
-        border: none;
-        outline: none;
-        background-color: $accent-color;
-        color: $light-color;
-        font-size: 18px;
-        letter-spacing: 0.9px;
-        padding: 13px 42px 17px 45px;
-        border-radius: 3px;
-        margin-left: 2px;
-        margin-top: 27px;
-    }
+    }    
 }
 
 .block-other {
@@ -378,11 +396,4 @@ body {
         color: $accent-color;
         margin-top: 17px;
     }    
-}
-.block-text__btn {
-    &_other {
-        background-color: #65e4a4;
-        margin: 84px auto 0 auto;
-        max-width: 221px;
-    }
 }
