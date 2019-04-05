@@ -30,6 +30,7 @@ body {
    font-size: 15px;
    line-height: 24px;
    color: $text-color;
+   letter-spacing: 0.75px;
 }
 
 .wrap {
@@ -130,8 +131,7 @@ body {
     &__description {
         font-family: 'Open Sans', serif;
         font-size: 15px;
-        line-height: 24px;
-        letter-spacing: 0.75px;       
+        line-height: 24px;        
         margin-bottom: 24px;
     }    
     small {
@@ -144,8 +144,7 @@ body {
         margin-top: 40px;
         &__date {
             font-family: 'Open Sans', serif;          
-            color: $text-color;            
-            letter-spacing: 0.75px;
+            color: $text-color;
         }
         &__title {
             font-size: 18px;           
@@ -155,8 +154,7 @@ body {
         &__desc {
             font-family: 'Open Sans', serif;            
             color: $text-color;
-            margin-top: 16px;
-            letter-spacing: 0.75px;
+            margin-top: 16px;           
         }
         &:last-child {
             margin-top: 55px;
@@ -218,6 +216,12 @@ body {
         text-align: center;
         letter-spacing: 2px;
         margin-bottom: 24px;
+        &_letter {
+            text-align: left;
+            margin-top: 8px;
+            margin-bottom: 23px;
+            letter-spacing: 1.8px;
+        }
     }
     &__subtitle {
         color: $accent-color;
@@ -267,6 +271,14 @@ body {
         &_blog {
             max-width: 265px;
             margin: 84px auto 0 auto;
+        }
+        &_letter {
+            cursor: pointer;
+            max-width: none;
+            width: 100%;
+            margin-bottom: 0;
+            margin-top: 20px;
+            padding: 13px 0 17px 0;
         }
     }
     &-events {
@@ -332,8 +344,7 @@ body {
     &-text {
         flex-basis: 41%;
         &__desc{
-            font-family: 'Open Sans', serif;
-            letter-spacing: 0.75px;
+            font-family: 'Open Sans', serif;            
         }
     }
     &-social {
@@ -467,8 +478,7 @@ body {
     &-info {
         display: inline-block;
         font-family: 'Open Sans', serif;
-        font-size: 15px;
-        letter-spacing: 0.75px;
+        font-size: 15px;        
         a {
             text-decoration: none;
             color: $accent-color;
@@ -495,5 +505,30 @@ body {
             object-fit: cover;
             transform: translate(-50%, -50%);
         }
+    }
+}
+.block-letter {
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        flex-basis: 48.8%;
+    }
+    &__input {
+        outline: none;
+        box-sizing: border-box;
+        width: 100%;
+        border: none;
+        border-radius: 3px;
+        background-color: $bg-dark-color;
+        font-family: 'Open Sans', serif;
+        color: #9191b5;       
+        padding: 15px 30px 16px 27px;
+        &::-webkit-input-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
+        &:-moz-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
+        &::-moz-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
+        &:-ms-input-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
+    }
+    &__text {
+        font-family: 'Open Sans', serif;
     }
 }
