@@ -10,6 +10,7 @@ $accent-color:#65e496;
 $bg-light-color: #f5f6fa;
 $bg-dark-color: #44444f;
 $text-color: #696980;
+$gray-color: #9191b5;
 
 h1, h2, h3, h4, p {
     padding: 0;
@@ -521,14 +522,84 @@ body {
         border-radius: 3px;
         background-color: $bg-dark-color;
         font-family: 'Open Sans', serif;
-        color: #9191b5;       
+        color: $gray-color;       
         padding: 15px 30px 16px 27px;
-        &::-webkit-input-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
-        &:-moz-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
-        &::-moz-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
-        &:-ms-input-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: #9191b5; letter-spacing: 0.75px;};
+        &::-webkit-input-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: $gray-color; letter-spacing: 0.75px;};
+        &:-moz-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: $gray-color; letter-spacing: 0.75px;};
+        &::-moz-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: $gray-color; letter-spacing: 0.75px;};
+        &:-ms-input-placeholder {font-family: 'Open Sans', serif; font-size: 15px; color: $gray-color; letter-spacing: 0.75px;};
     }
     &__text {
         font-family: 'Open Sans', serif;
+    }
+}
+.footer {
+    font-family: 'Open Sans', serif;
+    background-color: $bg-dark-color;
+    color: $gray-color;
+    padding: 160px 0 154px 0;
+    .block-footer {
+        display: flex;
+        justify-content: space-between;
+        &>div {
+            flex-basis: 32%;
+            &:nth-child(n+2) {
+                flex-basis: 23.2%;
+            }
+        }
+        &__logo {
+            display: block;
+            width: 137px;
+            height:28px;
+            background-image: url(../img/footer-logo.svg);
+        }
+        &__title {
+            font-family: 'Roboto Slab', serif;
+            color: $accent-color;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-top: 9px;
+        }
+        &__text {            
+            letter-spacing: 0.6px;
+            margin-top: 25px;
+        }
+        &__list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 20px 0 0 0;
+            &>li {
+                letter-spacing: 0.6px;
+                &>a {
+                    display: block;
+                    width: fit-content;
+                    margin-top: 4px;
+                    text-decoration: none;
+                    color: $gray-color;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $light-color;
+                    }              
+                }
+            }                
+        }
+        &__social {
+            display: flex;
+            list-style-type: none;
+            text-decoration: none;
+            padding: 0;
+            margin: 11px 0 0 0;
+            &>li {
+                margin-right: 13px;
+                &>a {
+                    color: $accent-color;
+                    transition: 0.3s;
+                    &:hover {
+                        color: $light-color;
+                    }              
+                }
+            }
+        }
     }
 }
