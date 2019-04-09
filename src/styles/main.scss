@@ -603,3 +603,55 @@ body {
         }
     }
 }
+.block-carousel {
+    text-align: center;
+    &__avatar {
+        position: relative;
+        width: 152px;
+        height: 152px;
+        border-radius: 50%;
+        margin: 0 auto 26px auto;
+        &_1 {
+            background-image: url(../img/avatar.png);
+            background-position: -112px -9px;
+        }
+        &_2 {
+            background-image: url(../img/avatar2.png);
+            background-position: -27px 0;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+        }
+        &_3 {
+            background-image: url(../img/avatar3.png);           
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+        }
+        span {            
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 48px;
+            color: #65e4a6;
+        }
+    }
+    &__subtitle {
+        color: $accent-color;
+    }
+    &__text {
+        font-family: 'Open Sans', serif;
+        color: $gray-color;
+        margin-top: 5px;
+        &:nth-child(2n) {
+            margin: 33px auto 0 auto;
+            max-width: 750px;
+            line-height: 28px;
+        }      
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
