@@ -11,6 +11,7 @@ $bg-light-color: #f5f6fa;
 $bg-dark-color: #44444f;
 $text-color: #696980;
 $gray-color: #9191b5;
+$dots-color: #5bb498;
 
 h1, h2, h3, h4, p {
     padding: 0;
@@ -609,8 +610,20 @@ body {
         position: relative;
         width: 152px;
         height: 152px;
-        border-radius: 50%;
-        margin: 0 auto 26px auto;
+        overflow: visible;
+        margin: 5px auto 26px auto;
+        span {            
+            position: absolute;
+            top: -5px;
+            right: -15px;
+            font-size: 48px;
+            color: #65e4a6;
+        }
+    }
+    &__foto {       
+        width: 152px;
+        height: 152px;
+        border-radius: 50%;        
         &_1 {
             background-image: url(../img/avatar.png);
             background-position: -112px -9px;
@@ -625,15 +638,9 @@ body {
             background-image: url(../img/avatar3.png);           
             background-size: auto 100%;
             background-repeat: no-repeat;
-        }
-        span {            
-            position: absolute;
-            top: 0;
-            right: 0;
-            font-size: 48px;
-            color: #65e4a6;
-        }
+        }        
     }
+
     &__subtitle {
         color: $accent-color;
     }
@@ -645,13 +652,38 @@ body {
             margin: 33px auto 0 auto;
             max-width: 750px;
             line-height: 28px;
-        }      
+        }          
     }
     .slick-dots {
         display: flex;
         justify-content: center;
         list-style-type: none;
-        margin: 0;
+        margin: 48px auto 0 auto;
         padding: 0;
+        &>li {
+            margin: 0 5px;
+            line-height: 8px;
+            &>button {
+                text-indent: -99999px;
+                width: 8px;
+                height: 8px;
+                border: none;
+                background-color: $dots-color;
+                border-radius: 50%;
+                padding: 4px;
+                outline: none;
+                cursor: pointer;
+                &:hover {
+                    background-color: $accent-color;
+                }
+            }
+        }
+        .slick-active {
+            &>button {
+                width: 37px;
+                border-radius: 4px;
+                background: linear-gradient(to top left, #65e4ce, #65e4a1);
+            }
+        }
     }
 }
