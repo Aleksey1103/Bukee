@@ -22,21 +22,23 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	</head>
 	<body>
-		<div class="page-main">
+		<div id="page-main" class="page-main">
 			<header>
 				<div class="header">
 					<a href="#" class="header__logo"></a>
 					<ul class="header-list">
-						<li class="header-list__item active"><a href="#" class="header-list__link">Home</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">About</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">Contents</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">Books</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">Education</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">Skills</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">Portfolio</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">Clients</a></li>
-						<li class="header-list__item"><a href="#" class="header-list__link">Contact</a></li>
+						<li class="header-list__item active"><a href="#" class="header-list__link scroll">Home</a></li>
+						<li class="header-list__item"><a href="#" id="author" class="header-list__link scroll">About</a></li>
+						<li class="header-list__item"><a href="#" id="contents" class="header-list__link scroll">Contents</a></li>
+						<li class="header-list__item"><a href="#" id="books" class="header-list__link scroll">Books</a></li>
+						<li class="header-list__item"><a href="#" id="education" class="header-list__link scroll">Education</a></li>
+						<li class="header-list__item"><a href="#" id="skills" class="header-list__link scroll">Skills</a></li>
+						<li class="header-list__item"><a href="#" id="portfolio" class="header-list__link scroll">Portfolio</a></li>
+						<li class="header-list__item"><a href="#" id="clients" class="header-list__link scroll">Clients</a></li>
+						<li class="header-list__item"><a href="#" id="contact" class="header-list__link scroll">Contact</a></li>
 					</ul>
+					<button class="btn-menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="#fff"><path d="M491.318 235.318H20.682C9.26 235.318 0 244.577 0 256s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 78.439H20.682C9.26 78.439 0 87.699 0 99.121c0 11.422 9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.26 20.682-20.682 0-11.422-9.259-20.682-20.682-20.682zM491.318 392.197H20.682C9.26 392.197 0 401.456 0 412.879s9.26 20.682 20.682 20.682h470.636c11.423 0 20.682-9.259 20.682-20.682s-9.259-20.682-20.682-20.682z"/></svg></button>
+					<button class="btn-close"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 475.2 475.2" fill="#fff"> <path d="M405.6 69.6C360.7 24.7 301.1 0 237.6 0s-123.1 24.7-168 69.6S0 174.1 0 237.6s24.7 123.1 69.6 168 104.5 69.6 168 69.6 123.1-24.7 168-69.6 69.6-104.5 69.6-168-24.7-123.1-69.6-168zm-19.1 316.9c-39.8 39.8-92.7 61.7-148.9 61.7s-109.1-21.9-148.9-61.7c-82.1-82.1-82.1-215.7 0-297.8C128.5 48.9 181.4 27 237.6 27s109.1 21.9 148.9 61.7c82.1 82.1 82.1 215.7 0 297.8z"/><path d="M342.3 132.9c-5.3-5.3-13.8-5.3-19.1 0l-85.6 85.6-85.6-85.6c-5.3-5.3-13.8-5.3-19.1 0-5.3 5.3-5.3 13.8 0 19.1l85.6 85.6-85.6 85.6c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l85.6-85.6 85.6 85.6c2.6 2.6 6.1 4 9.5 4 3.5 0 6.9-1.3 9.5-4 5.3-5.3 5.3-13.8 0-19.1l-85.4-85.6 85.6-85.6c5.3-5.3 5.3-13.8 0-19.1z"/></svg></button>
 				</div>
 				<div class="wrap">
 					<div class="block-book">
@@ -59,7 +61,7 @@
 				</div>
 			</header>
 		</div> 
-		<div class="page">
+		<div id="page-author" class="page">
 			<div class="wrap">
 				<div class="block-author">
 					<div class="block-text">
@@ -77,7 +79,7 @@
 							</linearGradient>
 							<rect width="435" height="558" x="0" y="0" fill="url(#gradient)"></rect>
 						</svg>
-						<img class="block-ava__img" src="../img/author.png" alt="author">
+						<img class="block-ava__img" src="./img/author.png" alt="author">
 					</div>
 				</div>
 				<div class="block-counter">                    
@@ -87,7 +89,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="page page_gray">
+		<div id="page-contents" class="page page_gray">
 			<div class="wrap">
 				<h2 class="page__title">Book Contents</h2>
 				<p class="page__subtitle">Let’s see what we have covered in the book</p>
@@ -118,12 +120,25 @@
 						   <li>Consectetur adipisicing elit</li>
 						   <li>Labore et dolore magna</li>                                
 						</ol>
-						<button class="page__btn page__btn_about">More</button>
+						<ol id="nextContentlist" class="block-about-table__list block-about-table__list_next" style="display: none">
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>                                
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>
+							<li>Consectetur adipisicing elit</li>
+							<li>Labore et dolore magna</li>                                
+						 </ol>
+						<button id="nextContent" class="page__btn page__btn_about">More</button>
+						<button id="closeContent" class="block-about-table__btn-close" style="display: none"><i class="fas fa-chevron-up"></i></button>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="page page_other">
+		<div id="page-books" class="page page_other">
 			<div class="wrap">
 				<h2 class="page__title">Other Books</h2>
 				<p class="page__subtitle">Some books you might be interested in</p>
@@ -168,7 +183,7 @@
 				<a href="#" class="page__btn page__btn_other">Browse all books</a>
 			</div>
 		</div>
-		<div class="page page_carousel">
+		<div id="page-education" class="page page_carousel">
 			<div class="wrap">
 				<div class="block-carousel">
 					<div>
@@ -202,7 +217,7 @@
 			</div>
 			<svg class="page__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1601 849"><path d="M0 0l802 61 799-61v789l-799 60L0 789V0z" fill="#44444f" fill-rule="evenodd"/></svg>
 		</div>
-		<div class="page page_events">
+		<div id="page-skills" class="page page_events">
 			<div class="wrap">
 				<div class="block-author">
 					<div class="block-ava">
@@ -213,7 +228,7 @@
 							</linearGradient>
 							<rect width="435" height="704" x="0" y="0" fill="url(#gradient)"></rect>
 						</svg>
-						<img class="block-ava__img block-ava__img_left" src="../img/author-2.png" alt="author-2">
+						<img class="block-ava__img block-ava__img_left" src="./img/author-2.png" alt="author-2">
 					</div>
 					<div class="block-text block-text_events">
 						<p class="block-text__name block-text__name_events">- Emma Anderson</p>
@@ -234,13 +249,13 @@
 				</div>				
 			</div>
 		</div>
-		<div class="page page_gray page_blog">
+		<div id="page-portfolio" class="page page_gray page_blog">
 			<div class="wrap">
 				<h2 class="page__title">Latest from Blog</h2>
 				<p class="page__subtitle">Some of the latest posts from my personal blog</p>
 				<div class="block-blog">
 					<div class="block-blog-item">
-						<div class="block-blog-img"><img src="../img/blog-img-1.png" alt=""></div>
+						<div class="block-blog-img"><img src="./img/blog-img-1.png" alt=""></div>
 						<h4>Importance of light in photography</h4>
 						<div class="block-blog-info">
 							<p><a href="#"><span>By </span>Emma Anderson</a><span> - </span><a href="#">June 20<span>, </span>2018</a></p>
@@ -248,7 +263,7 @@
 						</div>
 					</div>
 					<div class="block-blog-item">
-						<div class="block-blog-img"><img src="../img/blog-img-2.png" alt=""></div>
+						<div class="block-blog-img"><img src="./img/blog-img-2.png" alt=""></div>
 						<h4>The tools you need for the perfection</h4>
 						<div class="block-blog-info">
 							<p><a href="#"><span>By </span>Emma Anderson</a><span> - </span><a href="#"> June 25<span>, </span>2018</a></p>
@@ -256,7 +271,7 @@
 						</div>
 					</div>
 					<div class="block-blog-item">
-						<div class="block-blog-img"><img src="../img/blog-img-3.png" alt=""></div>
+						<div class="block-blog-img"><img src="./img/blog-img-3.png" alt=""></div>
 						<h4>Knowing the difference is important</h4>
 						<div class="block-blog-info">
 							<p><a href="#"><span>By </span>Emma Anderson</a><span> - </span><a href="#"> August 22<span>, </span>2018</a></p>
@@ -267,7 +282,7 @@
 				<a href="#" class="page__btn page__btn_blog">Read more in the blog</a>
 			</div>
 		</div>
-		<div class="page page_letter">
+		<div id="page-contact" class="page page_letter">
 			<div class="wrap">
 				<div class="block-letter">
 					<div class="block-letter-item">
@@ -284,12 +299,12 @@
 		<div class="page footer">
 			<div class="wrap">
 				<div class="block-footer">
-					<div>
+					<div class="block-footer__item">
 						<a href="#" class="block-footer__logo"></a>
 						<p class="block-footer__text">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						<p class="block-footer__text">© 2018 Bukee Private Limited.</p>
 					</div>
-					<div>
+					<div class="block-footer__item">
 						<h2 class="block-footer__title">Useful Links</h2>
 						<ul class="block-footer__list">
 							<li><a href="#">About Bukee</a></li>
@@ -298,7 +313,7 @@
 							<li><a href="#">Privacy Policy</a></li>
 						</ul>
 					</div>
-					<div>
+					<div class="block-footer__item">
 						<h2 class="block-footer__title">Our Contacts</h2>
 						<ul class="block-footer__list">
 							<li>Amphitheatre Parkway, CA, 94043</li>
@@ -317,16 +332,75 @@
 				</div>
 			</div>
 		</div>
+		<a href="#" id="main" class="page__btn page__btn_up scroll"><i class="fas fa-chevron-up"></i></a>
 		<script src="./js/main.js" defer></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script>
 			$(document).ready(function(){
+				var windowWidth = window.innerWidth;
+				if (windowWidth<=750) {
+					$('.header-list').addClass('modal-list');
+					$('.header-list__item').addClass('modal-list__item').removeClass('header-list__item active');
+					$('.modal-list__item:first-child').addClass('modal-list__item_active');
+					$('.header-list__link').addClass('modal-list__link');
+					$(".page__btn_up").removeAttr('id style');
+				}												
 				$('.block-carousel').slick({					
 					dots:true,
 					arrows: false
 				});
+				$('#nextContent').click(function(){
+					$('#nextContentlist').fadeIn();
+					$('#nextContent').hide();
+					$('#closeContent').fadeIn();
+				});
+				$('#closeContent').click(function(){
+					$('#nextContentlist').hide();
+					$('#nextContent').show();
+					$('#closeContent').hide();
+				});
+				$(window).resize(function(){
+					var modalWidth = window.innerWidth;					
+					if (modalWidth<=750) {
+						$('.header-list').addClass('modal-list');
+						$('.header-list__item').addClass('modal-list__item').removeClass('header-list__item active');
+						$('.modal-list__item:first-child').addClass('modal-list__item_active');
+						$('.header-list__link').addClass('modal-list__link');
+						$(".page__btn_up").removeAttr('id style');						
+					}
+					if (modalWidth>750) {
+						$('.header-list').removeClass('modal-list').removeAttr('style');
+						$('.modal-list__item').addClass('header-list__item').removeClass('modal-list__item modal-list__item_active');
+						$('.header-list__item:first-child').addClass('active');
+						$('.header-list__link').removeClass('modal-list__link');
+						$(".page__btn_up").attr('id', 'main');
+					}
+				});
+				$('.btn-menu').click(function(){
+					$('.modal-list').fadeIn();
+					$('.btn-close').fadeIn();
+				});
+				$('.btn-close').click(function(){
+					$('.modal-list').fadeOut();
+					$('.btn-close').hide();
+				});
+				$(".scroll").on("click", function (event) {
+						event.preventDefault();
+						var id  = $(this).attr('id'),
+						top = $("#page-" + id).offset().top;
+						$('body,html').animate({scrollTop: top}, 1000);
+				});
+				$(window).scroll(function(){
+					var windowScroll = $(window).scrollTop();
+						if (windowScroll>1000) {
+							$("#main").fadeIn();
+						}
+						else {
+							$("#main").fadeOut();
+						}
+				});					
 			});
-		</script>
+		</script>		
 	</body>
 </html>
